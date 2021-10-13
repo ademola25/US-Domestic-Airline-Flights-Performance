@@ -130,11 +130,8 @@ app.layout = html.Div(children=[
                                 # TASK3: Add a division with two empty divisions inside. See above disvision for example.
                                 # Enter your code below. Make sure you have correct formatting.
                                 html.Div([
-                
-                                #TASK 
-                                html.Div([ ], id='4'),
-                                html.Div([ ], id='plot5')
-                        
+                                        html.Div([ ], id='plot4'),
+                                        html.Div([ ], id='plot5')
                                 ], style={'display': 'flex'}),
 
 
@@ -190,7 +187,7 @@ def get_graph(chart, year, children1, children2, c3, c4, c5):
             # TASK6: Number of flights flying to each state from each reporting airline
             # Enter your code below. Make sure you have correct formatting.
             
-            tree_fig = px.treemap(data, path=['DestState', 'Reporting_Airline'], 
+            tree_fig = px.treemap(tree_data, path=['DestState', 'Reporting_Airline'], 
                       values='Flights',
                       color='Flights',
                       color_continuous_scale='RdBu',
